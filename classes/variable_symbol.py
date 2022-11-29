@@ -1,4 +1,3 @@
-# variable_symbol.py
 # Variable_symbol.py
 # We defined a class called Variable
 

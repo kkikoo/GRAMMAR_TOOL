@@ -1,4 +1,4 @@
-# terminal_symbol.py
+# Terminal_symbol.py
 # We defined a class called Terminal
 
 # a Terminal is just a string, here we rewrite the __hash__() method for this class

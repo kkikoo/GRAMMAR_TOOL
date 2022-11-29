@@ -1,5 +1,4 @@
 # grammar.py
-# grammar.py
 # We defined a class called Grammar
 
 # The Grammar class records all variable names and rules in the file
