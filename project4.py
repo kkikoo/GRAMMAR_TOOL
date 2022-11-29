@@ -3,6 +3,7 @@
 # ICS 33 Fall 2022
 # Project 4: Still Looking for Something
 
+
 from classes.read_file import read_file
 from pathlib import Path
 
@@ -10,6 +11,7 @@ from pathlib import Path
 def _read_input_file_path() -> Path:
     """Reads the input file path from the standard input"""
     return Path(input())
+
 
 def main() -> None:
     """begin generate n sentences"""
