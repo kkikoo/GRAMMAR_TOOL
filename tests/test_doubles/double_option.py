@@ -33,3 +33,4 @@ class DoubleOption:
         for i in self.option_varlist:
             print("name = ", i.var_name)
         print("-------end----------")
+
