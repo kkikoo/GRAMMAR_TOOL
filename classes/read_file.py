@@ -4,11 +4,12 @@
 # * it read file and process it to a class Grammar
 # * it return a class Grammar, combine all info of the file
 
-from pathlib import Path
+from classes.rule import Rule
 from classes.option import Option
 from classes.grammar import Grammar
 from classes.terminal_symbol import Terminal
 from classes.variable_symbol import Variable
+from pathlib import Path
 
 
 def read_file(filepath: Path) -> Grammar:
@@ -57,5 +58,17 @@ def read_file(filepath: Path) -> Grammar:
                 index_of_right.append(index)
             index += 1
 
+
     G = Grammar({})
 
+    for (L, R) in zip(index_of_left, index_of_right):
+        var_name = data[L+1:R][0]
+
+        option_list = [e.split(' ') for e in data[L+1:R][1:]]
+        option_list = [process_option_line(e) for e in option_list]
+
+        r = Rule(option_list)
+        v = Variable(var_name)
+        G.grammar_map[v] = r
+
+    return G

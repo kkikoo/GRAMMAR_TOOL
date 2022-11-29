@@ -1,4 +1,5 @@
 # grammar.py
+# grammar.py
 # We defined a class called Grammar
 
 # The Grammar class records all variable names and rules in the file
@@ -10,6 +11,7 @@
 # * which accepts the name of start_variable,
 # * the number of sentences expected to be output,
 # * and then generates a series of sentences according to the rules
+
 
 class Grammar:
     def __init__(self, map_of_grammar: dict) -> None:
@@ -30,4 +32,3 @@ class Grammar:
         except:
             raise ValueError(
                 "Do not have a variable named {}".format(start_variable))
-

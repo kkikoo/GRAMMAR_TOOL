@@ -11,6 +11,7 @@
 from classes.option import Option
 import random
 
+
 class Rule:
     def __init__(self, option_list_of_rule: list[Option]) -> None:
         self.rule_option_list = option_list_of_rule[:]

@@ -1,4 +1,5 @@
 # variable_symbol.py
+# Variable_symbol.py
 # We defined a class called Variable
 
 # a Variable can represent any string or sentences
@@ -8,6 +9,7 @@
 # * which accepts the grammar_map of file,
 # * and then get the rule of this Variable
 # * finally we do the generate_sentence(grammar_map) method of this rule
+
 
 class Variable:
     def __init__(self, name_of_var) -> None:

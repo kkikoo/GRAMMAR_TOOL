@@ -8,6 +8,7 @@
 # * which accepts the grammar_map of file,
 # * and then generates a series of sentences according to the Option
 
+
 class Option:
     def __init__(self, weight_of_option: int, varlist_of_option: list) -> None:
         self.option_weight = weight_of_option
@@ -30,4 +31,3 @@ class Option:
         for i in self.option_varlist:
             print("name = ", i.var_name)
         print("-------end----------")
-

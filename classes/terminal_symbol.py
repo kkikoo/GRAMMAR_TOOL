@@ -7,6 +7,7 @@
 # * which accepts the grammar_map of file,
 # * and then return the var_name in this class
 
+
 class Terminal:
     def __init__(self, name_of_var: str) -> None:
         self.var_name = name_of_var
@@ -40,5 +41,4 @@ class Terminal:
             str: the var_name in this class
         """
         return self.var_name
-
 
