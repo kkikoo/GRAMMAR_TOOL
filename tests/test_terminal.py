@@ -1,21 +1,23 @@
 import unittest
-from classes.terminal_symbol import Terminal
+
+from test_doubles.double_terminal_symbol import DoubleTerminal
 
 
 class TestTerminal(unittest.TestCase):
     def test_hash(self):
-        t = Terminal("Bob")
+        t = DoubleTerminal("Bob")
         self.assertEqual(hash(t), hash("Bob"))
 
     def test_equal(self):
         var1 = "Bob"
-        self.assertEqual(Terminal("Bob"), var1)
-        self.assertEqual(Terminal("Bob"), Terminal("Bob"))
+        self.assertEqual(DoubleTerminal("Bob"), var1)
+        self.assertEqual(DoubleTerminal("Bob"), DoubleTerminal("Bob"))
 
     def test_generate_sentence(self):
-        t = Terminal("Bob")
+        t = DoubleTerminal("Bob")
         self.assertEqual(t.generate_sentence(), "Bob")
 
 
 if __name__ == '__main__':
     unittest.main()
+

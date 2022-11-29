@@ -1,22 +1,22 @@
-import random
 import unittest
 
-from pathlib import Path
+import unittest
 
-from classes.read_file import read_file
-from classes.terminal_symbol import Terminal
-from classes.variable_symbol import Variable
-from classes.option import Option
+from test_doubles.test_io import TestIO
+from test_doubles.double_read_file import test_double_of_read_file
+from test_doubles.double_terminal_symbol import DoubleTerminal
+from test_doubles.double_variable_symbol import DoubleVariable
+from test_doubles.double_option import DoubleOption
 
 
 class TestOption(unittest.TestCase):
     def test_option_generate_sentence_with_test_txt(self):
-        path = Path("../test_data/test.txt")
-        G = read_file(path)
-        t = Option(1, [Terminal("Bob"), Terminal("is"), Variable("Adjective"), Terminal("today")])
-        random.seed(99)
-        self.assertEqual(t.generate_sentence(G.grammar_map), "Bob is relaxing today")
+        G = test_double_of_read_file(TestIO().TEST)
+        t = DoubleOption(1, [DoubleTerminal("Bob"), DoubleTerminal("is"),
+                             DoubleVariable("Adjective"), DoubleTerminal("today")])
+        self.assertEqual(t.generate_sentence(G.grammar_map), "Bob is happy today")
 
 
 if __name__ == '__main__':
     unittest.main()
+
