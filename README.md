@@ -7,7 +7,8 @@
 
 Sentence Generator 算法:
 1. 从只有一个Variable的Sentence开始
-2. 选一个Variable，在对应的替换规则中pick一个 3. Repeat，直到没有Variable剩下
+2. 选一个Variable，在对应的替换规则中pick一个
+3. Repeat，直到没有Variable剩下
 
 • A grammar contains a collection of rules.
 
